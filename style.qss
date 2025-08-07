@@ -1,0 +1,117 @@
+/* 主界面样式 */
+QMainWindow {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+                                stop:0 #0c0e1a, stop:1 #13152d);
+}
+
+#mainWidget {
+    background: transparent;
+    padding: 15px;
+}
+
+/* 面板样式 */
+.panel {
+    background: rgba(20, 22, 33, 180);
+    border: 1px solid #2a2a4a;
+    border-radius: 12px;
+    padding: 15px;
+}
+
+PanelTitle {
+    font-size: 16px;
+    font-weight: bold;
+    color: #70a0ff;
+    margin-bottom: 10px;
+}
+
+/* 标签页样式 */
+QTabWidget::pane {
+    border: 1px solid #33335f;
+    background: rgba(18, 20, 35, 220);
+    border-radius: 8px;
+    margin-top: 5px;
+}
+
+QTabBar::tab {
+    background: rgba(30, 32, 50, 200);
+    color: #8090d0;
+    border: 1px solid #33335f;
+    border-bottom: none;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding: 8px 16px;
+    margin-right: 2px;
+}
+
+QTabBar::tab:selected {
+    background: rgba(50, 60, 110, 220);
+    color: #c0d0ff;
+    border: 1px solid #55557f;
+    border-bottom: none;
+}
+
+/* 按钮样式 */
+QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #404080, stop:1 #28285f);
+    color: #e0e0ff;
+    border: 1px solid #55558a;
+    border-radius: 8px;
+    padding: 8px 15px;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #5050a0, stop:1 #38387f);
+}
+
+QPushButton:pressed {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                stop:0 #303070, stop:1 #18184f);
+}
+
+/* 滑块样式 */
+QSlider::groove:horizontal {
+    height: 8px;
+    background: #222244;
+    border-radius: 4px;
+}
+
+QSlider::handle:horizontal {
+    background: qradialgradient(cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5,
+                                stop:0 #7090ff, stop:1 #5070d0);
+    width: 20px;
+    height: 20px;
+    margin: -6px 0;
+    border-radius: 10px;
+}
+
+QSlider::sub-page:horizontal {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+                                stop:0 #4060c0, stop:1 #6080e0);
+    border-radius: 4px;
+}
+
+/* 输入框样式 */
+QLineEdit, QDoubleSpinBox, QSpinBox {
+    background: rgba(15, 17, 28, 200);
+    color: #b0c0ff;
+    border: 1px solid #33335f;
+    border-radius: 6px;
+    padding: 5px 10px;
+    selection-background-color: #405090;
+}
+
+/* 实时监控图表样式 */
+MonitoringChart {
+    background: rgba(12, 15, 25, 180);
+    border-radius: 8px;
+}
+
+/* 渲染窗口样式 */
+RenderWindow {
+    background: rgba(0, 0, 0, 220);
+    border: 1px solid #40406a;
+    border-radius: 12px;
+}

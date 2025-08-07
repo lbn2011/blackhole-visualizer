@@ -1,0 +1,69 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "blackhole-visualizer"
+version = "1.0.0"
+description = "具有吸积盘和光线扭曲效果的黑洞物理模拟器"
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [
+    { name = "AstroCode Studio", email = "contact@astrocode.io" }
+]
+keywords = ["astronomy", "blackhole", "physics", "simulation", "visualization"]
+license = { text = "MIT License" }
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Education",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Astronomy",
+    "Topic :: Scientific/Engineering :: Physics",
+    "Topic :: Scientific/Engineering :: Visualization",
+]
+dependencies = [
+    "PyQt5 >= 5.15.0",
+    "pyqtgraph >= 0.13.3",
+    "numpy >= 1.23.0",
+    "scipy >= 1.9.0",  # 用于物理计算
+    "matplotlib >= 3.6.0",  # 用于高级绘图
+]
+
+[project.scripts]
+blackhole-visualizer = "main:main"
+
+[project.urls]
+Homepage = "https://github.com/lbn2011/blackhole-visualizer"
+Documentation = "https://blackhole-visualizer.readthedocs.io"
+Source = "https://github.com/lbn2011/blackhole-visualizer"
+Issues = "https://github.com/lbn2011/blackhole-visualizer/issues"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["*"]
+exclude = ["docs", "tests", "examples"]
+
+[tool.setuptools.package-data]
+"blackhole_visualizer" = [
+    "assets/*.png",
+    "style.qss",
+    "*.py"
+]
+
+[tool.cibuildwheel]
+build = "cp38-*"  # 兼容Python 3.8及以上
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
